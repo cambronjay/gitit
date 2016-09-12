@@ -1,15 +1,15 @@
 # gitit
 A sample project built with Ionic 2 which consumes the GitHub API via search.
 
--Clone repo
 
+-install ionic 2 and its dependencies
+-clone repo
 -cd into directory
+-npm install
 
--run npm install
-
--run ionic serve --lab 
-
--run ionic emulate ios 
+ionic serve --lab 
+-or-
+ionic emulate ios 
 
 
 Have fun and buy me a bourbon! https://www.paypal.me/buymebourbon
