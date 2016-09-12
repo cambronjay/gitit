@@ -28,7 +28,7 @@ export class GitHubPage {
   search(search: any) {
     this.val = search.target.value;
     //Search only if character length is greater than 3 and search query is not empty
-    if ((this.val && this.val.trim() != '') && this.val.trim().length > 3) {
+    if ((this.val && this.val.trim() != '') && this.val.trim().length > 2) {
         // Search for users using service
         this.githubservice.searchUsers(this.val)
           .then(data => this.results = data)
