@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="about">
+
+  <div padding-top text-center *ngIf="about">
+
+    <img [src]="about.avatar_url">
+    <h2>{{about.name}}</h2>
+    <p text-left>{{about.bio}}</p>
+    <ion-list>
+
+      <ion-item>
+        <ion-icon name="link" item-left></ion-icon>
+        <h2>{{about.blog}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="phone-portrait" item-left></ion-icon>
+        <h2>502-883-8361</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <h2>{{about.email}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="logo-linkedin" item-left></ion-icon>
+        <h2>@jaycambron</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <h2>Louisville, Ky</h2>
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+
+</ion-content>

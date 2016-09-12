@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar primary>
+    <ion-searchbar [(ngModel)]="GitHubSearch" (ionInput)="search($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="github">
+  <ion-list>
+    <ion-item *ngFor="let user of results" (click)="viewDetails($event, user)" tappable>
+      <ion-avatar item-left>
+        <img src="{{user.avatar_url}}">
+      </ion-avatar>
+      <h2>{{user.login}}</h2>
+      <p>Score: {{user.score}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

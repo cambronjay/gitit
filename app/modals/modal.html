@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Repos
+    </ion-title>
+    <ion-buttons start>
+      <button (click)="close()" tappable>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="modal">
+
+  <ion-card *ngFor="let repo of repos">
+    <ion-item>
+      <h2>{{repo.name}}</h2>
+      <p>{{repo.full_name}}</p>
+    </ion-item>
+
+    <ion-card-content *ngIf="repo.description">
+      <p>{{repo.description}}</p>
+    </ion-card-content>
+
+    <ion-card-content *ngIf="!repo.description">
+      <p>no description</p>
+    </ion-card-content>
+
+    <ion-list>
+
+      <ion-item>
+        <h2>Language: {{repo.language}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <h2>Forks: {{repo.forks}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <h2>Open issues: {{repo.open_issues}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="copy" item-left></ion-icon>
+        <h2>{{repo.clone_url}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="git-branch" item-left></ion-icon>
+        <h2>{{repo.default_branch}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="eye" item-left></ion-icon>
+        <h2>{{repo.watchers}}</h2>
+      </ion-item>
+
+      <ion-item *ngIf="repo.homepage">
+        <ion-icon name="link" item-left></ion-icon>
+        <h2>{{repo.homepage}}</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="time" item-left></ion-icon>
+        <h2>{{repo.created_at | moment:'LL'}}</h2>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+</ion-content>
