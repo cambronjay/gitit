@@ -1,7 +1,7 @@
 # gitit
 A sample project built with Ionic 2 which consumes the GitHub API via a simple search.
 
-
+*Prepwork
 -install ionic 2 and its dependencies
 
 -clone repo
@@ -10,7 +10,7 @@ A sample project built with Ionic 2 which consumes the GitHub API via a simple s
 
 -npm install
 
-
+*To view the app
 ionic serve --lab 
 
 -or-
